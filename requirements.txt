@@ -5,3 +5,7 @@ SQLAlchemy
 PyMySQL
 boto3
 pytest
+
+duckdb
+pandas
+streamlit
