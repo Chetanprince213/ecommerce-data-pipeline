@@ -84,10 +84,11 @@ def main():
     log("E-COMMERCE PIPELINE STARTED")
 
     tasks = [
-        ("Project smoke test", "src/project_smoke_test.py"),
-        ("Analytics", "src/analytics.py"),
-        ("Data quality checks", "src/data_quality.py"),
-    ]
+    ("Project smoke test", "src/project_smoke_test.py"),
+    ("Analytics", "src/analytics.py"),
+    ("Data quality checks", "src/data_quality.py"),
+    ("Pipeline monitor", "src/pipeline_monitor.py"),
+]
 
     try:
         for task_name, script_path in tasks:
