@@ -30,6 +30,34 @@ The project processes e-commerce datasets, creates analytical datasets, performs
 8. **Monitoring:** Logs and a CSV execution history record run status, duration, and errors.
 9. **Scheduling:** Windows Task Scheduler can execute the local Python workflow on a schedule.
 
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[Raw E-commerce CSV Files] --> B[Amazon S3 - Raw Data]
+    B --> C[AWS Glue and PySpark]
+    C --> D[Processed Parquet Datasets]
+    D --> E[Download to Local Project]
+    E --> F[DuckDB Analytics]
+    F --> G[Streamlit Dashboard]
+    D --> H[Python Data Quality Checks]
+    H --> I[Data Quality Reports]
+    F --> J[Pipeline Execution Logs]
+    H --> J
+    J --> K[Windows Task Scheduler]
+```
+
+### Pipeline Flow
+
+1. Raw e-commerce CSV datasets are stored in Amazon S3.
+2. AWS Glue uses PySpark to transform the datasets into Parquet outputs.
+3. The processed outputs are downloaded to the local project.
+4. DuckDB runs analytical queries against the local processed datasets.
+5. Streamlit displays the analytics in a dashboard.
+6. Python data quality checks generate reports.
+7. The Python runner records execution history and logs; Windows Task Scheduler launches the local workflow on its schedule.
+
 ## Processed Datasets
 
 - Enriched sales
