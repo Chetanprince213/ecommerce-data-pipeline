@@ -1,0 +1,15 @@
+customers.csv: 150 rows, 5 columns
+products.csv: 10 rows, 4 columns
+orders.csv: 2500 rows, 9 columns
+website_sessions.csv: 3000 rows, 7 columns
+search_trends.csv: 258 rows, 4 columns
+inventory.csv: 10 rows, 4 columns
+
+Total customers: 150
+Total products: 10
+Total order records: 2500
+Total website sessions: 3000
+Total trend records: 258
+Total inventory records: 10
+
+STATUS: PASSED

@@ -1,0 +1,37 @@
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Credentials
+credentials.json
+secrets/
+*.pem
+*.key
+
+# Generated local database
+*.duckdb
+*.duckdb.wal
+
+# Logs
+logs/
+*.log
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

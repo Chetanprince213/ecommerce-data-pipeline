@@ -1,0 +1,6 @@
+E-COMMERCE DATA QUALITY REPORT
+===================================
+Total checks: 12
+Passed checks: 12
+Failed checks: 0
+Overall status: PASS
