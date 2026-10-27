@@ -19,7 +19,6 @@ HISTORY_FILE = LOG_DIR / "pipeline_history.csv"
 def log(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {message}"
-
     print(line)
 
     with open(LOG_FILE, "a", encoding="utf-8") as file:
@@ -85,13 +84,10 @@ def main():
     log("E-COMMERCE PIPELINE STARTED")
 
     tasks = [
-         ("Analytics", "src/analytics.py"),
+        ("Project smoke test", "src/project_smoke_test.py"),
+        ("Analytics", "src/analytics.py"),
         ("Data quality checks", "src/data_quality.py"),
-     ]
-    
-#     tasks = [
-#     ("Failure test", "src/this_file_does_not_exist.py"),
-# ]
+    ]
 
     try:
         for task_name, script_path in tasks:
