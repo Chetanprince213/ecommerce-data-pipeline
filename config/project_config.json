@@ -1,0 +1,25 @@
+
+{
+  "project_name": "ecommerce-data-pipeline",
+  "raw_data_directory": "data/raw",
+  "processed_data_directory": "data/processed",
+  "required_csv_files": [
+    "customers.csv",
+    "products.csv",
+    "orders.csv",
+    "website_sessions.csv",
+    "search_trends.csv",
+    "inventory.csv"
+  ],
+  "required_processed_datasets": [
+    "enriched_sales",
+    "daily_sales",
+    "customer_summary",
+    "product_summary"
+  ],
+  "logging": {
+    "directory": "logs",
+    "history_file": "pipeline_history.csv",
+    "log_file": "pipeline.log"
+  }
+}
